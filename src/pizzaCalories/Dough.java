@@ -13,14 +13,14 @@ public class Dough {
     }
 
     public void setFlourType(String flourType) {
-        if (!flourType.equals("white") && !flourType.equals("wholegrain")){
+        if (!flourType.equals("White") && !flourType.equals("Wholegrain")){
             throw new IllegalArgumentException("Invalid type of dough.");
         }
         this.flourType = flourType;
     }
 
     public void setBakingTechnique(String bakingTechnique) {
-        if (!bakingTechnique.equals("crispy") && !bakingTechnique.equals("chewy") && !bakingTechnique.equals("homemade")){
+        if (!bakingTechnique.equals("Crispy") && !bakingTechnique.equals("Chewy") && !bakingTechnique.equals("Homemade")){
             throw new IllegalArgumentException("Invalid type of dough.");
         }
         this.bakingTechnique = bakingTechnique;
@@ -36,14 +36,14 @@ public class Dough {
     public double calculateCalories() {
         double flourIndex = 0;
         double bakingIndex = 0;
-        if (flourType.equals("white")){
+        if (flourType.equals("White")){
             flourIndex = 1.5;
         }else {
             flourIndex = 1.0;
         }
         if (bakingTechnique.equals("Crispy")){
             bakingIndex = 0.9;
-        }else if (bakingTechnique.equals("chewy")){
+        }else if (bakingTechnique.equals("Chewy")){
             bakingIndex = 1.1;
         }else {
             bakingIndex = 1.0;
