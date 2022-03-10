@@ -30,6 +30,9 @@ public class Pizza {
         }
         this.toppings = new ArrayList<>(toppings);
     }
+    public void addTopping(Topping topping){
+        toppings.add(topping);
+    }
 
     public double getOverallCalories() {
         double allcals = dough.calculateCalories();
@@ -37,5 +40,9 @@ public class Pizza {
             allcals = allcals + toppings.get(i).calculateCalories();
         }
         return allcals;
+    }
+
+    public String getName() {
+        return name;
     }
 }
